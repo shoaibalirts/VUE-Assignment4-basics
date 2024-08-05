@@ -19,12 +19,13 @@
     <section id="assignment">
       <!-- 1) Fetch the user input and use it as a CSS class -->
       <!-- The entered class should be added to the below paragraph -->
-      <input type="text" v-model="getClassName"/>
+      <!-- <input type="text" :value="userStyle" @input="getUserStyle"/> -->
+      <input type="text" v-model="userName"/>
       <!-- (available classes: "user1", "user2") -->
-      <p>
+      <p :class="[addClasses, userClasses]">
         Style me!
       </p>
-      <button>Toggle Paragraph</button>
+      <button @click="toggleClass()">Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
       <!-- Clicking the button should toggle between the two options -->
 
